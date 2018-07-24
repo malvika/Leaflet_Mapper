@@ -35,11 +35,11 @@ function getFeatures(earthquakeData) {
 function createMap(earthquakes) {
 
   // Define map layers and Insert own API Key
-  var satelliteMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjjxaogzd6v212sqsqkthofvb/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFsdmlrYW1hdGh1ciIsImEiOiJjamljYm8zZzMwd2NkM3FvMHA4cWM2eXBvIn0.cfWxU3meeorwu5HF27WBtw");
+  var satelliteMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjjxaogzd6v212sqsqkthofvb/tiles/256/{z}/{x}/{y}?access_token=insertownAPIkeyhere");
 
-  var outdoorMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjicb1nuj07lt2sp7ll8b7370/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFsdmlrYW1hdGh1ciIsImEiOiJjamljYm8zZzMwd2NkM3FvMHA4cWM2eXBvIn0.cfWxU3meeorwu5HF27WBtw");
+  var outdoorMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjicb1nuj07lt2sp7ll8b7370/tiles/256/{z}/{x}/{y}?access_token=insertownAPIkeyhere");
 
-  var lightMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjjxb96ot6ufo2spkz8wsj0mj/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFsdmlrYW1hdGh1ciIsImEiOiJjamljYm8zZzMwd2NkM3FvMHA4cWM2eXBvIn0.cfWxU3meeorwu5HF27WBtw");
+  var lightMap = L.tileLayer("https://api.mapbox.com/styles/v1/malvikamathur/cjjxb96ot6ufo2spkz8wsj0mj/tiles/256/{z}/{x}/{y}?access_token=insertownAPIkeyhere");
 
   // Define a baseMaps object to hold our base layers
   var baseMaps = {
@@ -91,7 +91,7 @@ function createMap(earthquakes) {
               grades = [0, 1, 2, 3, 4, 5],
               labels = [];
 
-  // loop through our density intervals and generate a label with a colored square for each interval
+  // Loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
